@@ -3,7 +3,6 @@
 add_library(mpf-http-client STATIC
     src/http_client.cpp
     include/mpf/http/http_client.h
-    include/mpf/http/http_global.h
 )
 
 add_library(MPF::http-client ALIAS mpf-http-client)
