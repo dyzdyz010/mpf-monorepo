@@ -22,6 +22,11 @@ target_link_libraries(rules-plugin PRIVATE
     # NOTE: ui-components is linked by host, not plugin
 )
 
+# Static link CRT on MinGW to avoid cross-DLL heap issues
+if(MINGW)
+    target_link_options(rules-plugin PRIVATE -static-libgcc -static-libstdc++)
+endif()
+
 # QML files
 set(PLUGIN_QML_FILES
     qml/OrdersPage.qml
