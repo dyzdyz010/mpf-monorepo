@@ -18,7 +18,7 @@ target_link_libraries(rules-plugin PRIVATE
     Qt6::Gui
     Qt6::Qml
     Qt6::Quick
-    MPF::foundation-sdk
+    MPF::sdk
     # NOTE: ui-components is linked by host, not plugin
 )
 

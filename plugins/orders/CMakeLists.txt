@@ -19,7 +19,7 @@ target_link_libraries(orders-plugin PRIVATE
     Qt6::Qml
     Qt6::Quick
     Qt6::Network
-    MPF::foundation-sdk
+    MPF::sdk
     MPF::http-client
     # NOTE: ui-components is linked by host, not plugin
 )

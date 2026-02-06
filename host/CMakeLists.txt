@@ -46,7 +46,7 @@ target_link_libraries(mpf-host PRIVATE
     Qt6::Qml
     Qt6::Quick
     Qt6::QuickControls2
-    MPF::foundation-sdk
+    MPF::sdk
     MPF::ui-components
 )
 
