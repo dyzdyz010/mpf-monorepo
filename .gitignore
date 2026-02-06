@@ -15,3 +15,8 @@ CMakeLists.txt.user*
 # OS
 .DS_Store
 Thumbs.db
+
+# MOC generated
+moc_*.json
+qt6*.json
+AutogenInfo.json

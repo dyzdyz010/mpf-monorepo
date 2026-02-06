@@ -41,6 +41,6 @@ qt_add_qml_module(orders-plugin
     VERSION 1.0
     RESOURCE_PREFIX /
     QML_FILES ${PLUGIN_QML_FILES}
-    OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/plugins/orders/qml/YourCo/Orders
+    OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/qml/YourCo/Orders
     NO_PLUGIN
 )

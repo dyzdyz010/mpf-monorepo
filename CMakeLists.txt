@@ -47,19 +47,4 @@ set_target_properties(orders-plugin rules-plugin PROPERTIES
     RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/plugins
 )
 
-# ============================================
-# Post-build: Copy plugin QML to output
-# ============================================
-add_custom_command(TARGET orders-plugin POST_BUILD
-    COMMAND ${CMAKE_COMMAND} -E copy_directory
-        ${CMAKE_BINARY_DIR}/plugins/orders/qml
-        ${CMAKE_BINARY_DIR}/qml
-    COMMENT "Copying Orders plugin QML"
-)
-
-add_custom_command(TARGET rules-plugin POST_BUILD
-    COMMAND ${CMAKE_COMMAND} -E copy_directory
-        ${CMAKE_BINARY_DIR}/plugins/rules/qml
-        ${CMAKE_BINARY_DIR}/qml
-    COMMENT "Copying Rules plugin QML"
-)
+# Post-build commands are now in each plugin's CMakeLists.txt

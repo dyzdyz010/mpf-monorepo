@@ -40,6 +40,6 @@ qt_add_qml_module(rules-plugin
     VERSION 1.0
     RESOURCE_PREFIX /
     QML_FILES ${PLUGIN_QML_FILES}
-    OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/plugins/rules/qml/Biiz/Rules
+    OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/qml/Biiz/Rules
     NO_PLUGIN
 )
