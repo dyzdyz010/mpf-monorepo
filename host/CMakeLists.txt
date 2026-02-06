@@ -50,6 +50,11 @@ target_link_libraries(mpf-host PRIVATE
     MPF::ui-components
 )
 
+# Static link CRT on MinGW to avoid cross-DLL heap issues
+if(MINGW)
+    target_link_options(mpf-host PRIVATE -static-libgcc -static-libstdc++)
+endif()
+
 # QML files
 set(HOST_QML_FILES
     qml/Main.qml

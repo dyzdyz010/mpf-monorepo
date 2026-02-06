@@ -45,3 +45,8 @@ target_link_libraries(mpf-ui-components PUBLIC
     Qt6::Qml
     Qt6::Quick
 )
+
+# Static link CRT on MinGW to avoid cross-DLL heap issues
+if(MINGW)
+    target_link_options(mpf-ui-components PRIVATE -static-libgcc -static-libstdc++)
+endif()
