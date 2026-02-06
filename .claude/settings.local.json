@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cmake --build:*)",
+      "Bash(QML_IMPORT_TRACE=1 timeout 5 ./bin/mpf-host.exe:*)"
+    ]
+  }
+}

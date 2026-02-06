@@ -20,3 +20,5 @@ Thumbs.db
 moc_*.json
 qt6*.json
 AutogenInfo.json
+
+.qtcreator
