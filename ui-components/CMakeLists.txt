@@ -1,5 +1,8 @@
 # MPF UI Components - QML Component Library
 
+# Define export macro for Windows DLL
+add_compile_definitions(MPF_UI_COMPONENTS_EXPORTS)
+
 set(QML_FILES
     qml/MPFCard.qml
     qml/MPFButton.qml
