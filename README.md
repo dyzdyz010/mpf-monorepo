@@ -19,7 +19,7 @@ mpf-monorepo/
 
 ### Prerequisites
 
-- Qt 6.8.x with MinGW
+- Qt 6.8.x with MinGW (Windows) or GCC (Linux)
 - CMake 3.21+
 
 ### Build Steps
@@ -66,7 +66,9 @@ build/
 This monorepo build links all components statically (except plugins as DLLs),
 making it easier to step through code across component boundaries.
 
-To debug the heap corruption issue, set breakpoints in:
+For cross-DLL debugging, useful breakpoints:
 - `host/include/cross_dll_safety.h` - Deep copy functions
 - `host/src/navigation_service.cpp` - Route registration and retrieval
 - Plugin `start()` methods where routes are registered
+
+Note: The heap corruption issue has been resolved via `CrossDllSafety::deepCopy()` and static CRT linking.
